@@ -1,6 +1,6 @@
 const inputAdd = document.getElementById("input-add-todo");
 const todoCtn = document.getElementById("todo-container");
-const localStorageName = "setyorsoodtorsoodporcmorsonghorsaikai";
+const localStorageName = "SiteLocalStorage";
 
 inputAdd.onkeyup = (event) => {
   if (event.key !== "Enter") return;
@@ -40,10 +40,12 @@ function addTodo(title, completed) {
 
   doneBtn.style.display = "none";
   deleteBtn.style.display = "none";
+  //When cursor mouse is on the bar
   div.onmouseover = () => {
     doneBtn.style.display = "";
     deleteBtn.style.display = "";
   };
+  //When cursor mouse is off the bar
   div.onmouseout = () => {
     doneBtn.style.display = "none";
     deleteBtn.style.display = "none";
